@@ -7,6 +7,7 @@ Unit Test with mocked api response containing malformed json
 ApiService to separate logic of api calls from MVC controller
 Investigate if there is a way to get the nested json response to map cleanly on the Java record 
 Reduce use of free text in code by use of constants
+Improve logging
 
 # What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 Java records were added in Java 14 and Java 17 (this version) is the first long-term support version to contain this. 
