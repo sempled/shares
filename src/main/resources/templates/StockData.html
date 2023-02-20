@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Data</title>
+</head>
+<body>
+<div th:switch="${stockdata}">
+    <h2 th:case="null" th:text="'No stock data found for ' + ${param.symbol}"></h2>
+    <div th:case="*">
+        <h2 th:text="'Stock data for ' + ${param.symbol} + ' in week ending ' + ${#dates.format(stockdata.date, 'dd-MM-YYYY')}"></h2>
+        <table>
+            <thead>
+            <tr>
+                <th>High</th>
+                <th>Low</th>
+                <th>Average</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${stockdata.high}"></td>
+                <td th:text="${stockdata.low}"></td>
+                <td th:text="${stockdata.avg}">£</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br><a href="/api/shares/exportJSON" download="sharedata.json">Export as json</a>
+    <br><a href="/api/shares/StockSelection">Back to stock selection</a>
+
+</div>
+
+</body>
+</html>

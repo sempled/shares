@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Error</title>
+</head>
+<body>
+<h1>Error Page</h1>
+<table>
+    <tr>
+        <td>Date & Time</td>
+        <td th:text="${timestamp}"/>
+    </tr>
+    <tr>
+        <td>Path</td>
+        <td th:text="${path}"/>
+    </tr>
+    <tr>
+        <td>Error</td>
+        <td th:text="${error}"/>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td th:text="${status}"/>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td th:text="${message}"/>
+    </tr>
+    <!--Exception stack trace deliberately suppressed from the user-->
+</table>
+<br><a href="/api/shares/StockSelection">Back to stock selection screen</a>
+</body>
+</html>

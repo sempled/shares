@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Stock Selection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Please enter symbol for required stock</h2>
+<form th:action="@{StockData}" method="post">
+    <table>
+        <tr>
+            <td>
+                <input type="text" th:name="symbol"/>
+            </td>
+            <td>
+                <input type="submit" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
